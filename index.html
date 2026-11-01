@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CareCircle Demo</title>
+<meta name="description" content="CareCircle – Alltagshilfe für ältere Angehörige, mit immer denselben Helfern aus der Nachbarschaft. Demo zum Ausprobieren.">
+<meta name="theme-color" content="#4A6B45">
+<link rel="icon" href="app/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1E1C19; --ink2:#5D5852; --stone:#F1EEE8; --line:#E6E2DA; --moss:#4A6B45; --mossTint:#E6EDE3; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#fff; color:var(--ink); font:18px/1.45 "Source Sans 3", system-ui, sans-serif; }
+  main { max-width:560px; margin:0 auto; padding:28px 20px 48px; }
+  .brand { display:flex; align-items:center; gap:10px; font:500 22px "Newsreader", Georgia, serif; }
+  .brand img { width:36px; height:36px; }
+  h1 { font:500 40px/1.08 "Newsreader", Georgia, serif; margin:28px 0 10px; letter-spacing:-.2px; }
+  .lead { color:var(--ink2); margin:0 0 26px; }
+  .btn { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; min-height:58px; padding:14px 20px; border-radius:12px; font-weight:700; font-size:19px; text-decoration:none; margin-bottom:12px; }
+  .btn.primary { background:var(--ink); color:#fff; }
+  .btn.secondary { background:var(--stone); color:var(--ink); }
+  .btn:focus-visible { outline:3px solid var(--moss); outline-offset:3px; }
+  .note { font-size:15px; color:var(--ink2); margin:2px 0 26px; }
+  .shots { display:flex; gap:10px; overflow-x:auto; padding:4px 0 8px; margin:0 -20px 26px; padding-left:20px; scroll-snap-type:x mandatory; }
+  .shots img { width:62%; max-width:230px; border-radius:16px; border:1px solid var(--line); scroll-snap-align:start; flex:none; }
+  h2 { font:600 15px "Source Sans 3", sans-serif; color:var(--ink2); margin:28px 0 10px; }
+  .card { background:var(--stone); border-radius:14px; padding:16px 18px; }
+  .card ol, .card ul { margin:0; padding-left:20px; }
+  .card li { margin:6px 0; }
+  .tags span { display:inline-block; font-size:14px; font-weight:700; padding:3px 10px; border-radius:8px; margin-right:6px; }
+  .t1 { background:var(--mossTint); color:var(--moss); } .t2 { background:#fff; color:var(--ink); } .t3 { background:#FBF7EA; color:#8A6A1F; }
+  footer { margin-top:30px; font-size:14px; color:var(--ink2); }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand"><img src="mark.png" alt="">CareCircle</div>
+  <h1>Jemand ist da, auch wenn du es nicht sein kannst.</h1>
+  <p class="lead">Eine App, mit der Familien Alltagshilfe für ältere Angehörige organisieren – mit immer denselben, geprüften Helfern aus der Nachbarschaft. Und wer will, hilft in derselben App selbst.</p>
+
+  <a class="btn primary" href="app/">App jetzt öffnen</a>
+  <p class="note">Läuft direkt im Browser, auf iPhone und Android. Nichts installieren, kein Konto. Tipp: über „Teilen › Zum Home-Bildschirm“ wird daraus ein App-Symbol.</p>
+
+  <a class="btn secondary" href="https://github.com/Scottys3DPrints/carecircle-demo/releases/latest/download/CareCircle.apk">Android-App herunterladen (20 MB)</a>
+  <p class="note">Nur Android. Nach dem Download die Datei öffnen und einmal „Aus dieser Quelle installieren“ erlauben.</p>
+
+  <div class="shots" aria-label="Bildschirmfotos">
+    <img src="bilder/01_start_anna.jpg" alt="Start: Annas Leute, Ingrid und Walter">
+    <img src="bilder/08_start_jonas.jpg" alt="Start aus Sicht von Jonas, der hilft">
+    <img src="bilder/05_zettel.jpg" alt="Nachrichten: Zettel in Handschrift">
+  </div>
+
+  <h2>5-Minuten-Rundgang</h2>
+  <div class="card">
+    <ol>
+      <li>Die App startet als <b>Anna</b>. Sie sorgt für ihre Mutter Ingrid und ihren Onkel Walter.</li>
+      <li>Karte <b>Ingrid</b> antippen: ihre Woche, wer kommt, Notfallnummern.</li>
+      <li>Unten <b>In der Nähe</b>: Menschen, die Hilfe suchen. „Karl-Heinz“ antippen.</li>
+      <li>Unten <b>+ Hilfe suchen</b>: eine Anfrage für Ingrid einstellen.</li>
+      <li>Unten <b>Nachrichten</b>: die Zettel der Helfer, je Person.</li>
+      <li><b>Meins › Andere Person ausprobieren › Jonas Weber</b>: dieselbe App aus Sicht eines Helfers.</li>
+    </ol>
+  </div>
+
+  <h2>Die drei Zeichen an jeder Person</h2>
+  <div class="card tags">
+    <p style="margin:0 0 8px"><span class="t1">Du sorgst</span> deine eigene Person</p>
+    <p style="margin:0 0 8px"><span class="t2">Du hilfst</span> du besuchst sie als Helfer</p>
+    <p style="margin:0"><span class="t3">Sucht Hilfe</span> jemand in der Nähe, noch nicht deine Person</p>
+  </div>
+
+  <h2>Was mich interessiert</h2>
+  <div class="card">
+    <ul>
+      <li>Verstehst du nach einer Minute, wofür die App ist?</li>
+      <li>Ist klar, wer „deine Leute“ sind und wem du hilfst?</li>
+      <li>Wo bist du hängen geblieben?</li>
+      <li>Was ist zu viel – Text, Knöpfe, Seiten?</li>
+      <li>Würdest du das für deine Eltern oder Großeltern nutzen? Was fehlt?</li>
+      <li>Würdest du selbst als Helfer mitmachen?</li>
+      <li>Gesamtnote 1–10.</li>
+    </ul>
+  </div>
+
+  <footer>Demo mit ausgedachten Daten. Alles bleibt auf deinem Gerät. Durcheinander gebracht? Meins › Andere Person ausprobieren › Demo zurücksetzen. Fotos: Unsplash.</footer>
+</main>
+</body>
+</html>
